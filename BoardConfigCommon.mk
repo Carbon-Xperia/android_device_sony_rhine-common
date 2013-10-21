@@ -65,7 +65,7 @@ TARGET_KRAIT_BIONIC_PLDSIZE   := 64
 # Kernel information
 BOARD_KERNEL_BASE     := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE  := androidboot.hardware=qcom user_debug=31 maxcpus=2 msm_rtb.filter=0x37 ehci-hcd.park=3 msm_rtb.enable=0 lpj=192598 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y
+BOARD_KERNEL_CMDLINE  := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 msm_rtb.enable=0 lpj=192598 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y
 BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
 BOARD_KERNEL_SEPARATED_DT := true
 
@@ -83,8 +83,6 @@ WIFI_DRIVER_FW_PATH_STA          := "sta"
 WIFI_DRIVER_FW_PATH_AP           := "ap"
 
 BOARD_USE_SONY_MACUPDATE := true
-
-TARGET_PROVIDES_LIBLIGHT := true
 
 # GPS
 TARGET_PROVIDES_GPS_LOC_API := true
@@ -125,10 +123,6 @@ QCOM_AUDIO_FEATURE_DISABLED_MULTICHANNELS := true
 
 COMMON_GLOBAL_CFLAGS += -DDOLBY_DAP -DQCOM_DS1_DOLBY_DAP
 
-# FM radio
-#BOARD_USES_STE_FMRADIO := true
-#COMMON_GLOBAL_CFLAGS += -DSTE_FM
-
 # Display
 TARGET_QCOM_DISPLAY_VARIANT := mdss
 
@@ -137,13 +131,7 @@ TARGET_QCOM_MEDIA_VARIANT := v4l2
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# Sensors
-#SOMC_CFG_SENSORS := true
-#SOMC_CFG_SENSORS_LIGHT_LM3533 := yes
-#SOMC_CFG_SENSORS_GYRO_MPU3050 := yes
-#SOMC_CFG_SENSORS_PROXIMITY_APDS9702 := yes
-#SOMC_CFG_SENSORS_ACCEL_BMA250NA_INPUT := yes
-#SOMC_CFG_SENSORS_COMPASS_AK8963 := yes
+BOARD_HARDWARE_CLASS := device/sony/rhine-common/cmhw
 
 # TWRP flags
 DEVICE_RESOLUTION := 1080x1920
