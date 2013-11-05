@@ -92,13 +92,15 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
 
+# Time
+BOARD_USES_QC_TIME_SERVICES := true
+
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
 # Custom boot
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_CUSTOM_BOOTIMG_MK := device/sony/rhine-common/custombootimg.mk
-BOARD_CUSTOM_GRAPHICS := ../../../device/sony/rhine-common/recovery/graphics.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 
 TARGET_RECOVERY_FSTAB := device/sony/rhine-common/rootdir/fstab.qcom
